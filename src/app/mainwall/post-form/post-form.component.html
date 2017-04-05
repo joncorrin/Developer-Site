@@ -1,0 +1,51 @@
+<div class="row">
+  <form class="col s12 z-depth-3" [ngStyle]="{marginTop: '15px', marginLeft: '10px', width: '95%'}">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="name"
+               type="text"
+               class="validate"
+               #postName
+        >
+        <label for="name">Name</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="email"
+               type="email" class="validate"
+               #postEmail
+        >
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="title"
+               type="text" class="validate"
+               #postTitle
+        >
+        <label for="title">Title</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="imagePath"
+               type="text" class="validate"
+               #postImagePath
+        >
+        <label for="imagePath">Image URL</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s10">
+        <textarea id="content"
+                  #postContent
+                  class="materialize-textarea"></textarea>
+        <label for="content">Content</label>
+      </div>
+      <div class="col s2">
+        <a id="postBtn"
+           class="btn-floating btn-largewaves-effect waves-light red"
+           (click)="onAddPost()">
+          <i class="material-icons">add</i></a>
+      </div>
+    </div>
+  </form>
+</div>

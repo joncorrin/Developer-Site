@@ -1,0 +1,17 @@
+.row {
+  margin-top: 50px !important;
+}
+
+
+#sideNav {
+  right: 0 !important;
+  left: auto !important;
+}
+.side-nav.fixed {
+  top: 66px !important;
+  width: 250px !important;
+  height: calc(100% + -127px) !important;
+  background-color: transparent;
+  border: none !important;
+  box-shadow: none !important;
+}

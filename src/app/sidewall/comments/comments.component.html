@@ -1,0 +1,11 @@
+<ul class="collection z-depth-5">
+  <li class="collection-item avatar">
+    <img *ngIf="comment.admin === true"
+         src="https://pbs.twimg.com/profile_images/831356366916816897/7i8ebvj_.jpg" alt="{{comment.name}}" class="circle">
+    <img *ngIf="comment.admin === false"
+         src="https://www.appointbetterboards.co.nz/Custom/Appoint/img/avatar-large.png" alt="{{comment.name}}" class="circle">
+    <span class="title">{{ comment.name }}</span>
+    <p>{{ comment.content }} </p><br>
+    <p [ngStyle]="{fontSize: 'small'}">{{date.getDay()}}/{{date.getMonth()}}/{{date.getFullYear()}}</p>
+  </li>
+</ul>

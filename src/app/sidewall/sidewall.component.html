@@ -1,0 +1,5 @@
+<div class="side-nav fixed" id="sideNav">
+  <app-comment-form (commentAdded)="onCommentAdded($event)">></app-comment-form>
+  <app-comments *ngFor="let comment of comments"
+                [comment]="comment"></app-comments>
+</div>

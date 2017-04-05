@@ -1,0 +1,15 @@
+  <div class="col s12 m7" id="cards">
+    <div class="card z-depth-5">
+      <div class="card-image">
+        <img src="{{post.imagePath}}">
+        <span class="card-title">{{post.title}}</span>
+      </div>
+      <div class="card-content">
+        <p>{{post.content}}</p>
+        <p>By {{ post.name }}</p>
+      </div>
+      <div class="card-action">
+        <p [ngStyle]="{fontSize: 'small'}">{{date.getDay()}}/{{date.getMonth()}}/{{date.getFullYear()}} -- {{ post.email }}</p>
+      </div>
+    </div>
+  </div>
