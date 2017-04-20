@@ -1,6 +1,5 @@
 import {Component, DoCheck, EventEmitter, OnInit} from '@angular/core';
-import {MaterializeAction} from 'angular2-materialize'
-import {PopoutService} from "../popout.service";
+import {PopoutService} from "../../popout.service";
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',

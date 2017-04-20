@@ -5,21 +5,30 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { ProfileComponent } from './profile/profile.component';
-import { MainwallComponent } from './mainwall/mainwall.component';
-import { SidewallComponent } from './sidewall/sidewall.component';
+import { ProfileComponent } from './home/profile/profile.component';
+import { MainwallComponent } from './home/mainwall/mainwall.component';
+import { SidewallComponent } from './home/sidewall/sidewall.component';
 import "materialize-css";
 import "angular2-materialize";
 import {MaterializeModule} from "angular2-materialize";
-import { PostFormComponent } from './mainwall/post-form/post-form.component';
-import { PostsComponent } from './mainwall/posts/posts.component';
-import { CommentFormComponent } from './sidewall/comment-form/comment-form.component';
-import { CommentsComponent } from './sidewall/comments/comments.component';
-import { PostModalComponent } from './mainwall/post-modal/post-modal.component';
-import { PostModalDirective } from './mainwall/post-modal/post-modal.directive';
+import { PostFormComponent } from './home/mainwall/post-form/post-form.component';
+import { PostsComponent } from './home/mainwall/posts/posts.component';
+import { CommentFormComponent } from './home/sidewall/comment-form/comment-form.component';
+import { CommentsComponent } from './home/sidewall/comments/comments.component';
+import { PostModalComponent } from './home/mainwall/post-modal/post-modal.component';
+import { PostModalDirective } from './home/mainwall/post-modal/post-modal.directive';
 import {PopoutService} from "./popout.service";
-import {CommentsService} from "./sidewall/comments.service";
+import {CommentsService} from "./home/sidewall/comments.service";
+import {RouterModule, Routes} from "@angular/router";
+import { ShopComponent } from './shop/shop.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'shop', component: ShopComponent },
+  { path: 'contact', component: ContactComponent }
+]
 
 @NgModule({
   declarations: [
@@ -33,13 +42,17 @@ import {CommentsService} from "./sidewall/comments.service";
     CommentFormComponent,
     CommentsComponent,
     PostModalComponent,
-    PostModalDirective
+    PostModalDirective,
+    ShopComponent,
+    ContactComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterializeModule
+    MaterializeModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [PopoutService, CommentsService],
   bootstrap: [AppComponent]

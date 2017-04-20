@@ -1,6 +1,6 @@
 import {Component, DoCheck, OnInit} from '@angular/core';
 import {Comment} from './comment.model';
-import {PopoutService} from "../popout.service";
+import {PopoutService} from "../../popout.service";
 import {CommentsService} from "./comments.service";
 
 @Component({
