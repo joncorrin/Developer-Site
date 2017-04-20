@@ -16,19 +16,24 @@ import { PostFormComponent } from './mainwall/post-form/post-form.component';
 import { PostsComponent } from './mainwall/posts/posts.component';
 import { CommentFormComponent } from './sidewall/comment-form/comment-form.component';
 import { CommentsComponent } from './sidewall/comments/comments.component';
+import { PostModalComponent } from './mainwall/post-modal/post-modal.component';
+import { PostModalDirective } from './mainwall/post-modal/post-modal.directive';
+import {PopoutService} from "./popout.service";
+import {CommentsService} from "./sidewall/comments.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
     ProfileComponent,
     MainwallComponent,
     SidewallComponent,
     PostFormComponent,
     PostsComponent,
     CommentFormComponent,
-    CommentsComponent
+    CommentsComponent,
+    PostModalComponent,
+    PostModalDirective
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,9 @@ import { CommentsComponent } from './sidewall/comments/comments.component';
     HttpModule,
     MaterializeModule
   ],
-  providers: [],
+  providers: [PopoutService, CommentsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private popoutService: PopoutService) {}
+}

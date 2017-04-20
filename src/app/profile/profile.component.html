@@ -1,4 +1,6 @@
-<ul class="side-nav fixed" id="profile">
+<ul class="side-nav fixed close"
+    id="profile"
+    [ngClass]="{open: visible === true, close: visible === false}">
   <img class="responsive-img circle" src="https://pbs.twimg.com/profile_images/831356366916816897/7i8ebvj_.jpg">
   <div id="profileContent">
     <a href="#!" class="collection-item">Projects</a>

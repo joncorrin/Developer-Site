@@ -3,15 +3,44 @@
 }
 
 
-#sideNav {
-  right: 0 !important;
-  left: auto !important;
-}
+
 .side-nav.fixed {
-  top: 66px !important;
+  top: 65px !important;
   width: 250px !important;
-  height: calc(100% + -127px) !important;
-  background-color: transparent;
+  height: calc(100% + -115px) !important;
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* Standard syntax (must be last) */
   border: none !important;
   box-shadow: none !important;
+  right: 0 !important;
+  left: auto !important;
+  transform: translateX(0);
+  border-radius: 3px !important;
+}
+
+
+@media only screen and (max-width: 992px) {
+  .open {
+    transform: translateX(0) !important;
+  }
+
+  .close {
+    transform: translateX(105%) !important;
+  }
+
+  #openX {
+    position: fixed !important;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  span.material-icons {
+    display: none !important;
+  }
+  #openX {
+    display: none !important;
+  }
+
 }

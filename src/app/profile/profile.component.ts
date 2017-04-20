@@ -1,23 +1,29 @@
-import {Component, EventEmitter, OnInit} from '@angular/core';
+import {Component, DoCheck, EventEmitter, OnInit} from '@angular/core';
 import {MaterializeAction} from 'angular2-materialize'
+import {PopoutService} from "../popout.service";
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit, DoCheck {
+  visible = false;
 
-  constructor() { }
+  constructor(private popoutService: PopoutService) { }
 
   ngOnInit() {
   }
 
-  modalActions = new EventEmitter<string|MaterializeAction>();
-  openModal() {
-    this.modalActions.emit({action:"modal",params:['open']});
+  ngDoCheck() {
+    if (this.popoutService.profileVisible) {
+      this.visible = true;
+      console.log("Profile visible is = " + this.visible);
+    } else {
+      this.visible = false;
+      console.log("Profile visible is = " + this.visible);
+    }
   }
-  closeModal() {
-    this.modalActions.emit({action:"modal",params:['close']});
-  }
+
+
 
 }

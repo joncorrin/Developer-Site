@@ -5,16 +5,44 @@ img {
   max-width: 75%;
   display: block;
 }
+a {
+  color: #996633 !important;
+  font-family: 'Lobster Two', cursive;
+  font-size: large;
+
+}
+
+a:hover {
+  color: white !important;
+  background-color: #996633;
+}
+
+
 
 .side-nav.fixed {
-  top: 66px !important;
+  top: 65px !important;
   width: 210px !important;
-  height: calc(100% + -127px) !important;
-  background-color: transparent;
+  height: calc(100% + -115px) !important;
   border: none !important;
   box-shadow: none !important;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* Standard syntax (must be last) */
 }
+
 
 #profileContent {
   text-align: center !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .open {
+    transform: translateX(0) !important;
+  }
+
+  .close {
+    transform: translateX(-105%) !important;
+  }
 }

@@ -1,7 +1,7 @@
 footer {
-  position: fixed !important;
-  bottom: 0!important;
-  width: 100%!important;
-  height: 60px;
-  background-color: #996633;
+  background-color: rgba(153,102,51,0.5)!important;
+}
+
+.themeColor {
+  color: #996633;
 }

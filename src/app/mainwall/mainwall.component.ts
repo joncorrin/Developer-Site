@@ -12,10 +12,18 @@ export class MainwallComponent implements OnInit {
 
   date = new Date();
   posts: Post[] = [
-    new Post('Moving to San Diego', 'This post is all about how I am moving to San Diego, California',
+    new Post('San Diego', 'This post is about how I am moving to San Diego.',
       'https://media-cdn.tripadvisor.com/media/photo-s/0a/8b/5f/41/downtown-san-diego-s.jpg',
       'Jon Corrin', 'jon.corrin@gmail.com'),
-    new Post('My time with Atlas Rideshare', 'This post is all about how I am trying to grow a company',
+    new Post('Atlas Rideshare', 'This post is all about how I am trying to grow a company',
+      'http://www.capegazette.com/sites/capegazette/files/2016/10/field/image/web-9.26%2BAtlantis.jpg',
+      'Jon Corrin', 'jon.corrin@gmail.com'),
+    new Post('Atlas Rideshare', 'This post is all about how I am trying to grow a company',
+      'http://www.capegazette.com/sites/capegazette/files/2016/10/field/image/web-9.26%2BAtlantis.jpg',
+      'Jon Corrin', 'jon.corrin@gmail.com'), new Post('Atlas Rideshare', 'This post is all about how I am trying to grow a company',
+      'http://www.capegazette.com/sites/capegazette/files/2016/10/field/image/web-9.26%2BAtlantis.jpg',
+      'Jon Corrin', 'jon.corrin@gmail.com'),
+    new Post('Atlas Rideshare', 'This post is all about how I am trying to grow a company',
       'http://www.capegazette.com/sites/capegazette/files/2016/10/field/image/web-9.26%2BAtlantis.jpg',
       'Jon Corrin', 'jon.corrin@gmail.com')
   ];

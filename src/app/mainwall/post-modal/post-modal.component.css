@@ -1,0 +1,7 @@
+.open {
+  z-index: 1003 !important;
+  display: block !important;
+  opacity: 1 !important;
+  transform: scaleX(1) !important;
+  top: 10% !important;
+}
