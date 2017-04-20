@@ -1,6 +1,5 @@
 import {Component, EventEmitter, HostBinding, HostListener, OnInit, Output} from '@angular/core';
 import {PopoutService} from "../popout.service";
-import {ScrollFade} from '../shared/scroll-fade.directive';
 
 @Component({
   selector: 'app-navbar',
@@ -8,10 +7,7 @@ import {ScrollFade} from '../shared/scroll-fade.directive';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  // @HostBinding('style.display') isScroll = "box";
-  // @HostListener('document:scroll') onScroll() {
-  //   this.isScroll = "none";
-  // }
+
 
   constructor(private popoutService: PopoutService) { }
 

@@ -23,9 +23,11 @@ import {RouterModule, Routes} from "@angular/router";
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LandingPageComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'shop', component: ShopComponent },
   { path: 'contact', component: ContactComponent }
 ]
@@ -45,7 +47,8 @@ const appRoutes: Routes = [
     PostModalDirective,
     ShopComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
