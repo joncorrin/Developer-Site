@@ -27,9 +27,9 @@ a:hover {
   box-shadow: none !important;
   border-radius: 3px;
   background: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom, rgba(255,255,255,1), rgba(255,255,255,0)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom, rgba(255,255,255,1), rgba(255,255,255,0)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0)); /* Standard syntax (must be last) */
+  background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* Standard syntax (must be last) */
 }
 
 
@@ -44,5 +44,14 @@ a:hover {
 
   .close {
     transform: translateX(-105%) !important;
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .side-nav.fixed {
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(255,255,255,1), rgba(255,255,255,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgba(255,255,255,1), rgba(255,255,255,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0)); /* Standard syntax (must be last) */
   }
 }

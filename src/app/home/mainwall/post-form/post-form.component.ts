@@ -39,6 +39,7 @@ export class PostFormComponent implements OnInit {
     const newPost = new Post(postTitle, postContent, postImagePath, postName, postType, postEmail);
     this.postAdded.emit(newPost);
     this.clearForm();
+    console.log(newPost);
   }
 
 

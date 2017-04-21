@@ -24,12 +24,14 @@ import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ThankYouPageComponent } from './shop/thank-you-page/thank-you-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'home', component: HomeComponent },
   { path: 'shop', component: ShopComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'thanks', component: ThankYouPageComponent }
 ]
 
 @NgModule({
@@ -48,7 +50,8 @@ const appRoutes: Routes = [
     ShopComponent,
     ContactComponent,
     HomeComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ThankYouPageComponent
   ],
   imports: [
     BrowserModule,
