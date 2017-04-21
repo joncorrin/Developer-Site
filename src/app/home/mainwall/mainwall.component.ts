@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Post} from "./posts.model";
+import {Post} from "../posts.model";
 
 
 @Component({
@@ -14,18 +14,22 @@ export class MainwallComponent implements OnInit {
   posts: Post[] = [
     new Post('San Diego', 'This post is about how I am moving to San Diego.',
       'https://media-cdn.tripadvisor.com/media/photo-s/0a/8b/5f/41/downtown-san-diego-s.jpg',
-      'Jon Corrin', 'jon.corrin@gmail.com'),
+      'Jon Corrin', 'blog', 'jon.corrin@gmail.com'),
     new Post('Atlas Rideshare', 'This post is all about how I am trying to grow a company',
       'http://www.capegazette.com/sites/capegazette/files/2016/10/field/image/web-9.26%2BAtlantis.jpg',
-      'Jon Corrin', 'jon.corrin@gmail.com'),
+      'Jon Corrin', 'media', 'jon.corrin@gmail.com'),
     new Post('Atlas Rideshare', 'This post is all about how I am trying to grow a company',
       'http://www.capegazette.com/sites/capegazette/files/2016/10/field/image/web-9.26%2BAtlantis.jpg',
-      'Jon Corrin', 'jon.corrin@gmail.com'), new Post('Atlas Rideshare', 'This post is all about how I am trying to grow a company',
-      'http://www.capegazette.com/sites/capegazette/files/2016/10/field/image/web-9.26%2BAtlantis.jpg',
-      'Jon Corrin', 'jon.corrin@gmail.com'),
+      'Jon Corrin', 'resume', 'jon.corrin@gmail.com'),
     new Post('Atlas Rideshare', 'This post is all about how I am trying to grow a company',
       'http://www.capegazette.com/sites/capegazette/files/2016/10/field/image/web-9.26%2BAtlantis.jpg',
-      'Jon Corrin', 'jon.corrin@gmail.com')
+      'Jon Corrin', 'work', 'jon.corrin@gmail.com'),
+    new Post('Atlas Rideshare', 'This post is all about how I am trying to grow a company',
+      'http://www.capegazette.com/sites/capegazette/files/2016/10/field/image/web-9.26%2BAtlantis.jpg',
+      'Jon Corrin', 'project', 'jon.corrin@gmail.com'),
+    new Post('San Diego', 'This post is about how I am moving to San Diego.',
+      'https://media-cdn.tripadvisor.com/media/photo-s/0a/8b/5f/41/downtown-san-diego-s.jpg',
+      'Jon Corrin', 'project', 'jon.corrin@gmail.com')
   ];
 
   onPostAdded(post: Post) {

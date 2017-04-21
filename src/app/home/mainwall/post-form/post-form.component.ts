@@ -1,5 +1,5 @@
 import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
-import {Post} from "../posts.model";
+import {Post} from "../../posts.model";
 
 @Component({
   selector: 'app-post-form',
@@ -13,6 +13,7 @@ export class PostFormComponent implements OnInit {
   @ViewChild ('postImagePath') postImagePathRef: ElementRef;
   @ViewChild ('postName') postNameRef: ElementRef;
   @ViewChild ('postEmail') postEmailRef: ElementRef;
+  @ViewChild ('postType') postTypeRef: ElementRef;
 
   constructor() { }
 
@@ -25,6 +26,7 @@ export class PostFormComponent implements OnInit {
     this.postImagePathRef.nativeElement.value = '';
     this.postNameRef.nativeElement.value = '';
     this.postEmailRef.nativeElement.value = '';
+    this.postTypeRef.nativeElement.value = '';
   }
 
   onAddPost() {
@@ -33,7 +35,8 @@ export class PostFormComponent implements OnInit {
     let postImagePath = this.postImagePathRef.nativeElement.value;
     let postName = this.postNameRef.nativeElement.value;
     let postEmail = this.postEmailRef.nativeElement.value;
-    const newPost = new Post(postTitle, postContent, postImagePath, postName, postEmail);
+    let postType = this.postTypeRef.nativeElement.value;
+    const newPost = new Post(postTitle, postContent, postImagePath, postName, postType, postEmail);
     this.postAdded.emit(newPost);
     this.clearForm();
   }

@@ -5,3 +5,13 @@
 .btn-floating {
   background-color: #4e91fd !important;
 }
+
+form {
+  width: 96% !important;
+}
+
+@media only screen and (max-width: 992px) {
+  form {
+    width: 94% !important;
+  }
+}
